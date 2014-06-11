@@ -1,75 +1,147 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Smallgoodboy.github.io by smallgoodboy</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<title>Data Science Lab</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="shortcut icon" href="/Datavis/img/dsl-logo.gif"/>
+	<meta name="description" content="Bootstrap Basic Tab Based Navigation Example">
+	<script src="/Datavis/js/jquery-1.11.0.js"></script>
+	<link href="/Datavis/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/Datavis/css/popwindow.css">
+	<script src="/Datavis/js/dropdown.js"></script>
+	<link href="/Datavis/css/carousel.css" rel="stylesheet">
+	<script src="/Datavis/js/holder.js"></script>
+	<script src="/Datavis/js/bootstrap.min.js"></script>
+	<script src="/Datavis/js/dropdown.js"></script>
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/smallgoodboy">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+	<style>
+	#body {
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	}
+	.navbar {
+	  margin-bottom: 20px;
+	}
+	</style>
+	
+	<script>
+		jQuery(document).ready(function($) {
+			$('.theme-popover-button').click(function(){
+				$('.theme-popover-mask').fadeIn(100);
+				$('.theme-popover').slideDown(200);
+			})
+			$('.theme-poptit .close').click(function(){
+				$('.theme-popover-mask').fadeOut(100);
+				$('.theme-popover').slideUp(200);
+			})
+			$('.theme-popover-mask').click(function(){
+				$('.theme-popover-mask').fadeOut(100);
+				$('.theme-popover').slideUp(200);
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="navbar-wrapper">
+	<div class="container">
+		<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="#">Data Science Laboratory</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active">
+					<a class="brand" href="#">首页</a>
+					</li>
+					<li><a href="#" target="_blank">FTP</a></li>
+					<li><a href="#">联系我们</a></li>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Smallgoodboy.github.io</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/smallgoodboy">smallgoodboy</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+				
+				<!--Copy right information-->
+				<li><a class="theme-popover-button">About</a></li>
+					<div class="theme-popover">
+						 <div class="theme-poptit">
+							  <a href="javascript:;" title="close" class="close">close X</a>
+							  <h3>ABOUT</h3>
+						 </div>
+						 <div class="theme-popbod dform">
+								<img src="/Datavis/img/dsl-logo.gif" height="100" width="100" style="height:100px; width:100px"></img>
+								<br>
+								<li><h3>Copyright &copy smallgoodboy</h3></li>
+								<br>
+								<li><h4><strong>Version:</strong>1.0T</h4></li>
+						 </div>
+					</div>
+				<div class="theme-popover-mask"></div>
+				
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div> 
+	
+	 <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="/Datavis/img/mainbuilding2.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <!--h1>Example headline.</h1>
+              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p-->
+            </div>
+          </div>
         </div>
+        <div class="item">
+          <img src="/Datavis/img/14.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <!--h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p-->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/Datavis/img/kikgo2.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <!--h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+	
+	
+	
+	<!-- FOOTER -->
+	<div class="container">
+		<footer>
+			<p class="pull-right"><a href="#">Back to top</a></p>
+			<p>&copy; 2014 smallgoodboy &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+		</footer>
+	</div>
 
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
-</html>
+</body>
+</html> 
