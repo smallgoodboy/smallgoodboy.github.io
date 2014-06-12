@@ -343,7 +343,7 @@ function addD3(labelname, jsonpath, width, height){
 function addTheD3Map(labelname, jsonpath){
 	var width = 800,
 			height = 610;
-	width = window.screen.width*0.72;
+	width = window.screen.width*0.55;
 	addD3(labelname, jsonpath, width, height);
 
 }
