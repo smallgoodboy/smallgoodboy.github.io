@@ -3,21 +3,19 @@
 <head> 
 	<title>smallgoodboy's home!</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<link rel="shortcut icon" href="/Datavis/img/dsl-logo.gif"/>
-	<meta name="description" content="Bootstrap Basic Tab Based Navigation Example">
-	<script src="/Datavis/js/jquery-1.11.0.js"></script>
-	<link href="/Datavis/css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/Datavis/css/popwindow.css">
-	<script src="/Datavis/js/dropdown.js"></script>
-	<link href="/Datavis/css/carousel.css" rel="stylesheet">
-	<script src="/Datavis/js/holder.js"></script>
-	<script src="/Datavis/js/bootstrap.min.js"></script>
-	<script src="/Datavis/js/dropdown.js"></script>
-	<link href="/Datavis/css/carousel.css" rel="stylesheet">
+	<link rel="shortcut icon" href="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/dsl-logo.gif"/>
 	
-	<link href="/Datavis/css/bootstrapSwitch.css" rel="stylesheet">
-	<script src="/Datavis/js/highlight.js"></script>
-	<script src="/Datavis/js/bootstrap-switch.js"></script>
+	<script src="J:/Users/long/git/smallgoodboy.github.io/Datavis/js/jquery-1.11.0.js"></script>
+	<link href="J:/Users/long/git/smallgoodboy.github.io/Datavis/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="J:/Users/long/git/smallgoodboy.github.io/Datavis/css/popwindow.css">
+	<link href="J:/Users/long/git/smallgoodboy.github.io/Datavis/css/carousel.css" rel="stylesheet">
+	<script src="J:/Users/long/git/smallgoodboy.github.io/Datavis/js/holder.js"></script>
+	<script src="J:/Users/long/git/smallgoodboy.github.io/Datavis/js/bootstrap.min.js"></script>
+	
+	<!--used for switch-->
+	<link href="J:/Users/long/git/smallgoodboy.github.io/Datavis/css/bootstrapSwitch.css" rel="stylesheet">
+	<script src="J:/Users/long/git/smallgoodboy.github.io/Datavis/js/highlight.js"></script>
+	<script src="J:/Users/long/git/smallgoodboy.github.io/Datavis/js/bootstrap-switch.js"></script>
 	
 	<style>
 	#body {
@@ -66,8 +64,12 @@
 			$("lang#zh-cn-lang").hide();
 		}
 		
-		function showMyInfo(){
-			$("#myinfo").toggle();
+		function showMyInfo(id){
+			$("#"+id).show("slow");
+		}
+		
+		function hideMyInfo(id){
+			$("#"+id).hide("slow");
 		}
 	</script>
 </head>
@@ -88,13 +90,15 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 							<li class="active">
-							<a class="brand" href="#"><lang id="am-en-lang">Home</lang><lang id="zh-cn-lang" style="display:none;">首页</lang></a>
+							<a class="brand glyphicon glyphicon-home" href="smallgoodboy.github.io"><lang id="am-en-lang">Home</lang><lang id="zh-cn-lang" style="display:none;">首页</lang></a>
 							</li>
-							<li><a href="#myprojects" onclick="showMyInfo()"><lang id="am-en-lang">About me</lang><lang id="zh-cn-lang" style="display:none;">关于我</lang></a></li>
+							<li><a href="#myintro" onclick="showMyInfo('myintro')" class="glyphicon glyphicon-user"><lang id="am-en-lang">About me</lang><lang id="zh-cn-lang" style="display:none;">关于我</lang></a></li>
+							
+							<li><a href="#myprojects" onclick="showMyInfo('myprojects')" class="glyphicon glyphicon-compressed"><lang id="am-en-lang">Projects</lang><lang id="zh-cn-lang" style="display:none;">项目</lang></a></li>
 
 						
 							<!--Copy right information-->
-							<li><a class="theme-popover-button"><lang id="am-en-lang">About</lang><lang id="zh-cn-lang" style="display:none;">帮助</lang></a></li>
+							<li><a class="theme-popover-button glyphicon glyphicon-info-sign"><lang id="am-en-lang">About</lang><lang id="zh-cn-lang" style="display:none;">帮助</lang></a></li>
 							<div class="theme-popover">
 								 <div class="theme-poptit">
 									  <a href="javascript:;" title="close" class="close">close X</a>
@@ -102,7 +106,7 @@
 								 </div>
 								 <div class="theme-popbod dform">
 									<a href="https://github.com/smallgoodboy" target="_blank">
-										<img src="/Datavis/img/avatar.png" height="100" width="100" style="height:100px; width:100px"></img>
+										<img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/avatar.png" height="100" width="100" style="height:100px; width:100px"></img>
 									</a>
 									<br>
 									<li><h3>Copyright &copy <a href=mailto:smallgoodboy@hotmail.com>smallgoodboy</a></h3></li>
@@ -112,7 +116,7 @@
 							</div><!--theme-popover-button-->
 							
 							<li class="dropdown">
-							  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><lang id="am-en-lang">Language</lang><lang id="zh-cn-lang" style="display:none;">语言</lang><b class="caret"></b></a>
+							  <a href="#" class="dropdown-toggle glyphicon glyphicon-cog" data-toggle="dropdown"><lang id="am-en-lang">Language</lang><lang id="zh-cn-lang" style="display:none;">语言</lang><b class="caret"></b></a>
 							  <ul class="dropdown-menu">
 								<li bgcolor="#000000">
 									<lang id="am-en-lang"> Change: </lang><lang id="zh-cn-lang" style="display:none;"> 改变：</lang><input style=" float:right" type="checkbox" name="my-checkbox" checked data-size="small" data-on-text="En" data-off-text="中文">
@@ -140,7 +144,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="/Datavis/img/jiuzhai2.jpg" alt="First slide">
+          <img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/jiuzhai2.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <!--h1>Example headline.</h1>
@@ -150,7 +154,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="/Datavis/img/tw2.jpg" alt="Second slide">
+          <img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/tw2.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <!--h1>Another example headline.</h1>
@@ -160,7 +164,7 @@
           </div>
         </div> 
         <div class="item">
-          <img src="/Datavis/img/ds2.jpg" alt="Third slide">
+          <img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/ds2.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <!--h1>One more for good measure.</h1>
@@ -174,63 +178,70 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
 	
-	<div id="myprojects" name="myprojects">
+	<div id="myintro" name="myintro" style="display:none;">
 		<div class="container">
 		<h2 style="height:60px;"><lang id="am-en-lang">Basic intro:</lang><lang id="zh-cn-lang" style="display:none;">基本介绍：</lang></h2>
 	
 		  <div class="row featurette">
-			<div class="col-md-9">
-			  <h4 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h4>
-			  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			<div class="col-md-2">
+				<img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/me.jpg" style="width:80%;height:80%;max-height:180px;max-width:100px;">
 			</div>
-			<div class="col-md-3">
-			  <img class="featurette-image img-responsive" data-src="holder.js/200x350/auto" alt="Generic placeholder image">
+			<div class="col-md-10">
+				<h2><lang id="am-en-lang">Long,</lang><lang id="zh-cn-lang" style="display:none;">隆，</lang></h2><br /><br />
+				<p><lang id="am-en-lang">From UESTC. Working on data visualization and data analysis. Familiar with Java and C++ programme language. Have been working on TCP/UDP network transmission protocol. Dealt with Java web dev, html, javascript, tomcat server, twitter bootstrap, D3, MongoDB.</lang>
+				<lang id="zh-cn-lang" style="display:none;">来自电子科大，正在完成数据可视化的工作。熟悉Java和C++，接触过TCP/UDP网络传输协议。涉及过Java web开发、html、javascript、tomcat server、twitter bootstrap、D3、MongoDB等开源软件和数据库。</lang></p>
 			</div>
+			
 		  </div>
+		  <p class="pull-right" onclick="hideMyInfo('myintro')"><a href="javascript:void(0)"><lang id="am-en-lang">Hide</lang><lang id="zh-cn-lang" style="display:none;">隐藏</lang></a></p>
+		  <hr class="featurette-divider"/>
 		</div>
 	</div>
 	
-	<div id="myprojects">
+	
+	
+	<div id="myprojects" name="myprojects">
 		<div class="container marketing">
-		<h2 style="height:60px;"><lang id="am-en-lang">My projects:</lang><lang id="zh-cn-lang" style="display:none;">项目：</lang></h2>
+		<h2 style="height:75px;"><lang id="am-en-lang">My projects:</lang><lang id="zh-cn-lang" style="display:none;">项目：</lang></h2>
 			<!-- Three columns of text below the carousel -->
 			<div class="row">
 				<div class="col-lg-4">
-					<img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+					<!--img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"-->
+					<h1 style="height:60px;"><span class="glyphicon glyphicon-resize-small"></span></h1>
 					<h2><lang id="am-en-lang">TCP transportation</lang><lang id="zh-cn-lang" style="display:none;">网络传输</lang></h2>
-					<lang id="am-en-lang"><p>A reliable transportation protocol based on UDP. With ACK algorithm, duplicate package detecting and network bottle neck measure algorithms.</p></lang>
-					<lang id="zh-cn-lang" style="display:none;"><p>一个基于UDP的网络传输协议， 实现ACK、重删、网络传输速率探测及调整算法以实现网络报文的可靠传输。</p></lang>
+					<lang id="am-en-lang"><p class="lead">A reliable transportation protocol based on UDP. With ACK algorithm, duplicate package detecting and network bottle neck measure algorithms.</p></lang>
+					<lang id="zh-cn-lang" style="display:none;"><p class="lead">一个基于UDP的网络传输协议， 实现ACK、重删、网络传输速率探测及调整算法以实现网络报文的可靠传输。</p></lang>
 					<p><a class="btn btn-default" href="#" role="button"><lang id="am-en-lang">View details</lang><lang id="zh-cn-lang" style="display:none;">查看详细</lang> &raquo;</a></p>
 				</div><!-- /.col-lg-4 -->
 				<div class="col-lg-4">
-					<img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-					<h2><lang id="am-en-lang">TCP transportation</lang><lang id="zh-cn-lang" style="display:none;">网络传输</lang></h2>
-					<lang id="am-en-lang"><p>A reliable transportation protocol based on UDP. With ACK algorithm, duplicate package detecting and network bottle neck measure algorithms.</p></lang>
-					<lang id="zh-cn-lang" style="display:none;"><p>一个基于UDP的网络传输协议， 实现ACK、重删、网络传输速率探测及调整算法以实现网络报文的可靠传输。</p></lang>
-					<p><a class="btn btn-default" href="#" role="button"><lang id="am-en-lang">View details</lang><lang id="zh-cn-lang" style="display:none;">查看详细</lang> &raquo;</a></p>
+					<!--img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"-->
+					<h1 style="height:60px;"><span class="glyphicon glyphicon-film"></span></h1>
+					<h2><lang id="am-en-lang">D3JS</lang><lang id="zh-cn-lang" style="display:none;">D3数据展示</lang></h2>
+					<lang id="am-en-lang"><p class="lead"><a href="http://d3js.org/" target="_blank">D3</a> is a javascript library to speed up web page dynamic presentation. We use it to analyse data.</p></lang>
+					<lang id="zh-cn-lang" style="display:none;"><p class="lead"><a href="http://d3js.org/" target="_blank">D3</a>是一个javascript库，用来快速开发动态数据展示的网络应用，我们用它来分析统计一些网络数据。</p></lang>
+					<p><a class="btn btn-default" href="http://jsfiddle.net/smallgoodboy/dd9Ls/" role="button" target="_blank"><lang id="am-en-lang">View details</lang><lang id="zh-cn-lang" style="display:none;">查看详细</lang> &raquo;</a></p>
 				</div><!-- /.col-lg-4 -->
 				<div class="col-lg-4">
-					<img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-					<h2><lang id="am-en-lang">TCP transportation</lang><lang id="zh-cn-lang" style="display:none;">网络传输</lang></h2>
-					<lang id="am-en-lang"><p>A reliable transportation protocol based on UDP. With ACK algorithm, duplicate package detecting and network bottle neck measure algorithms.</p></lang>
-					<lang id="zh-cn-lang" style="display:none;"><p>一个基于UDP的网络传输协议， 实现ACK、重删、网络传输速率探测及调整算法以实现网络报文的可靠传输。</p></lang>
+					<!--img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"-->
+					<h1 style="height:60px;"><span class="glyphicon glyphicon-globe"></span></h1>
+					<h2><lang id="am-en-lang">OSM map</lang><lang id="zh-cn-lang" style="display:none;">OSM地图</lang></h2>
+					<lang id="am-en-lang"><p class="lead"><a href="http://leafletjs.com/" target="_blank">Leaflet</a> is a open-source map display javascript tool. We use it to label position and analyse movement on <a href="http://www.openstreetmap.org/" target="_blank">OSM</a>, a open-source wiki-like world map.</p></lang>
+					<lang id="zh-cn-lang" style="display:none;"><p class="lead"><a href="http://leafletjs.com/" target="_blank">Leaflet</a>是一个开源的地图显示工具，由js开发，我们用它在OSM地图上显示地理位置信息以及查看移动路径，<a href="http://www.openstreetmap.org/" target="_blank">OSM</a>是一个开源的网友贡献的地图。</p></lang>
 					<p><a class="btn btn-default" href="#" role="button"><lang id="am-en-lang">View details</lang><lang id="zh-cn-lang" style="display:none;">查看详细</lang> &raquo;</a></p>
 				</div><!-- /.col-lg-4 -->
 			</div><!-- /.row -->
+			<p class="pull-right" onclick="hideMyInfo('myprojects')"><a href="javascript:void(0)"><lang id="am-en-lang">Hide</lang><lang id="zh-cn-lang" style="display:none;">隐藏</lang></a></p>
+			<hr class="featurette-divider"/>
 		</div>
 	</div>
 	
-	
-	
-	
-	<hr class="featurette-divider"/>
 	<!-- FOOTER -->
 	<div class="container">
 		<footer>
 			
 			<h4 style="display : inline;"><lang id="am-en-lang">Powered by:</lang><lang id="zh-cn-lang" style="display:none;">采用：</lang></h4>
-			<a href="http://github.com/" target="_blank"><img src="/Datavis/img/github.png"  height="30px" width="30px"/></a>
-			<a href="http://getbootstrap.com/" target="_blank"><img src="/Datavis/img/bootstrap.png"  height="30px" width="30px"/></a>
+			<a href="http://github.com/" target="_blank"><img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/github.png"  height="30px" width="30px"/></a>
+			<a href="http://getbootstrap.com/" target="_blank"><img src="J:/Users/long/git/smallgoodboy.github.io/Datavis/img/bootstrap.png"  height="30px" width="30px"/></a>
 			
 			<p class="pull-right"><a href="#"><lang id="am-en-lang">Back to top</lang><lang id="zh-cn-lang" style="display:none;">回到最上</lang></a></p>
 			<p>&copy; 2014 smallgoodboy &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
