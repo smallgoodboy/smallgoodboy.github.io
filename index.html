@@ -17,6 +17,11 @@
 	<script src="/Datavis/js/highlight.js"></script>
 	<script src="/Datavis/js/bootstrap-switch.js"></script>
 	
+	<script src="/Datavis/js/leaflet-src.js"></script>
+	<script src="/Datavis/js/d3.js"></script>
+	<link rel="stylesheet" href="/Datavis/css/leaflet.css" />
+	<script src="/Datavis/js/main.js"></script>
+	
 	<style>
 	#body {
 	  padding-top: 20px;
@@ -37,6 +42,13 @@
 		 -moz-border-radius: 4px;
 			  border-radius: 4px;
 	}
+	
+	#myCarousel { background: #d0d0d0; }
+	#myintro { background: #d0d0d0; }
+	#myprojects { background: #d0d0d0; }
+	#tricky { background: #d0d0d0; }
+	#tricky-inner{ background: #BEBEBE; }
+	#footer-place{ background: #d0d0d0; }
 	</style>
 	
 	<script>
@@ -71,6 +83,12 @@
 		function hideMyInfo(id){
 			$("#"+id).hide("slow");
 		}
+		
+		function initTricky(){
+			showMyInfo("tricky")
+			addOsmMap("map");
+			addTheD3Map("haha", "J:\Users\long\git\smallgoodboy.github.io\Datavis\datatestdataset.json");
+		}
 	</script>
 </head>
 <body>
@@ -96,6 +114,7 @@
 							
 							<li><a href="#myprojects" onclick="showMyInfo('myprojects')" class="glyphicon glyphicon-compressed"><lang id="am-en-lang">Projects</lang><lang id="zh-cn-lang" style="display:none;">项目</lang></a></li>
 
+							<li><a href="#tricky" onclick="initTricky()" class="glyphicon glyphicon-gift"><lang id="am-en-lang">Little trick</lang><lang id="zh-cn-lang" style="display:none;">小玩意</lang></a></li>
 						
 							<!--Copy right information-->
 							<li><a class="theme-popover-button glyphicon glyphicon-info-sign"><lang id="am-en-lang">About</lang><lang id="zh-cn-lang" style="display:none;">帮助</lang></a></li>
@@ -180,8 +199,7 @@
 	
 	<div id="myintro" name="myintro" style="display:none;">
 		<div class="container">
-		<h2 style="height:60px;"><lang id="am-en-lang">Basic intro:</lang><lang id="zh-cn-lang" style="display:none;">基本介绍：</lang></h2>
-	
+		<h2 style="height:100px;"><br /><lang id="am-en-lang">Basic intro:</lang><lang id="zh-cn-lang" style="display:none;">基本介绍：</lang></h2>
 		  <div class="row featurette">
 			<div class="col-md-2">
 				<img src="/Datavis/img/me.jpg" style="width:80%;height:80%;max-height:180px;max-width:100px;">
@@ -202,7 +220,7 @@
 	
 	<div id="myprojects" name="myprojects">
 		<div class="container marketing">
-		<h2 style="height:75px;"><lang id="am-en-lang">My projects:</lang><lang id="zh-cn-lang" style="display:none;">项目：</lang></h2>
+		<h2 style="height:100px;"><br /><lang id="am-en-lang">My projects:</lang><lang id="zh-cn-lang" style="display:none;">项目：</lang></h2>
 			<!-- Three columns of text below the carousel -->
 			<div class="row">
 				<div class="col-lg-4">
@@ -235,7 +253,47 @@
 		</div>
 	</div>
 	
+	
+	<div id="tricky" name="tricky"  style="display:none;">
+	<div  class="container">
+		<!-- Divide the screen to some parts -->
+		<!--div class="container"-->
+		<div class="row-fluid" style="height: 650px;" id="tricky-inner">
+			<div class="col-md-9">
+				<ul class="nav nav-pills">
+					<li class="active"><a href="#home" data-toggle="tab">Map</a></li>
+					<li><a href="#profile" data-toggle="tab">FDA</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">
+						<div id="map" style="height: 610px; width:100%"></div>
+						<script type="text/javascript">
+							
+						</script>
+
+					</div>
+					<div class="tab-pane" id="profile">
+						<!--iframe src="../testhtml/D3 FDA/ForceDirectedTest.html" width="1000" height="550" scrolling="no" frameborder="0" ></iframe-->
+						<haha id="d3svg" style="height: 610px; width:100%" class="hidden-xs">
+							<script>
+								
+							</script></haha>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3" id="informationshow">
+
+			</div>
+
+		</div>
+		<p class="pull-right" onclick="hideMyInfo('tricky')"><a href="javascript:void(0)"><lang id="am-en-lang">Hide</lang><lang id="zh-cn-lang" style="display:none;">隐藏</lang></a></p>
+		<hr class="featurette-divider"/>
+		</div>
+	</div><!--#tricky-->
+	
 	<!-- FOOTER -->
+	<div id="footer-place">
 	<div class="container">
 		<footer>
 			
@@ -245,13 +303,12 @@
 			
 			<p class="pull-right"><a href="#"><lang id="am-en-lang">Back to top</lang><lang id="zh-cn-lang" style="display:none;">回到最上</lang></a></p>
 			<p>&copy; 2014 smallgoodboy &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			<br /><br />
 		</footer>
+	</div>
 	</div>
 
 	
-	<div id="myinfo" class="container">
-		
-	</div><!--#myinfo-->
 	
 	<script>
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
