@@ -99,10 +99,13 @@
 			$("#"+id).hide("slow");
 		}
 		
+		var inited=false;
 		function initTricky(){
 			showMyInfo("tricky")
-			addOsmMap("map");
-			addTheD3Map("haha", "/Datavis/data/testdataset.json");
+			if(inited===false){
+				addOsmMap("map");
+				addTheD3Map("haha", "/Datavis/data/testdataset.json");
+			}
 		}
 	</script>
 </head>
